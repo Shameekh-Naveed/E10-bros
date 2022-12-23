@@ -5,6 +5,7 @@ import CartComponent from "./Components/CartComponent";
 import LoginSignup from "./Components/LoginSignup";
 import { Checkout } from "./Pages/Checkout";
 import { Profile } from "./Pages/Profile";
+import { Home } from "./Pages/Home";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import autoAnimate from "@formkit/auto-animate";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
@@ -21,11 +22,11 @@ const App = () => {
   // }, [parentRef]);
 
   return (
-    <div ref={parent}>
+    <div ref={parent} className="m-0 p-0 flex flex-row">
       <Sidebar />
 
       <Routes>
-        <Route path="/" element={<Checkout />} />
+        <Route path="/" element={<Home />} />
         {/* <Route index element={<Home />} /> */}
         <Route path="/home2" element={<Profile />} />
 
