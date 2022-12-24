@@ -32,7 +32,14 @@ export const Home = () => {
       <div className="section">
         <h2 className="text-center">Popular Dishes</h2>
         {/* Use a query to display the few dishes with the most popularity */}
+        <div className="flex flex-wrap justify-between">
         <MenuCard/>
+        <MenuCard/>
+        <MenuCard/>
+        <MenuCard/>
+        <MenuCard/>
+        <MenuCard/>
+        </div>
       </div>
       <div className="section"></div>
       <div id="newsletter"></div>
