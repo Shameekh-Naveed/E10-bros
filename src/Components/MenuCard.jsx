@@ -2,7 +2,7 @@ import React from "react";
 
 export const MenuCard = (props) => {
   const style = {
-    "box-shadow": "  5px 5px 10px #666666, -5px -5px 10px #ffffff",
+    // "box-shadow": "  5px 5px 10px #666666, -5px -5px 10px #ffffff",
   };
   let { name, img, desc, price } = props;
   img = "https://picsum.photos/200";
@@ -13,7 +13,7 @@ export const MenuCard = (props) => {
   //   truncate desc if greater then 15 words
   return (
     <div
-      className="w-60 border-4 rounded border-black my-2 hover: transition-all"
+      className="w-60 border-4 rounded border-black my-2 transition-all"
       style={style}    >
       <img src={img} alt={name} className="mx-auto mb-2" />
       <h4 className="font-bold mb-1">{name}</h4>

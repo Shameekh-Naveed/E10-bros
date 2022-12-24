@@ -7,21 +7,26 @@ export const Sidebar = () => {
   // const opener = props.opener()
   const [sidebarStatus, setSidebarStatus] = useState(false);
   const [size, setSize] = useState({ width: "3rem" });
-  const [eleChange, setEleChange] = useState({})
+  const [eleChange, setEleChange] = useState({});
 
-  const changeSidebar = (action) => {
+  const changeSidebar = (request) => {
+    if (request === "close") {
+      setSize({ width: "3rem" });
+      setSidebarStatus(false);
+      setEleChange({ transform: "rotate(360deg)" });
+      return;
+    }
     if (sidebarStatus) {
       // size = {"width":"1rem"};
       setSize({ width: "3rem" });
       setSidebarStatus(false);
-    setEleChange({"transform":"rotate(360deg)"})
+      setEleChange({ transform: "rotate(360deg)" });
     } else {
       setSize({ width: "16rem" });
-      setEleChange({"transform":"rotate(0deg)"})
+      setEleChange({ transform: "rotate(0deg)" });
 
       setSidebarStatus(true);
     }
-
   };
 
   return (
@@ -39,38 +44,28 @@ export const Sidebar = () => {
       <nav>
         <ul>
           <li className="my-4">
-            <Link to={"/"} href="#">
+            <Link onClick={() => changeSidebar("close")} to={"/"} href="#">
               Home
             </Link>
           </li>
           <li className="my-4">
-            <Link to={"/menu"} href="#">
+            <Link onClick={() => changeSidebar("close")} to={"/menu"} href="#">
               Menu
             </Link>
           </li>
+
           <li className="my-4">
-            <Link to={"/home3"} href="#">
-              Services
-            </Link>
-          </li>
-          <li className="my-4">
-            <Link to={"/profile"} href="#">
+            <Link
+              onClick={() => changeSidebar("close")}
+              to={"/profile"}
+              href="#"
+            >
               Profile
-            </Link>
-          </li>
-          <li className="my-4">
-            <Link to={"/home4"} href="#">
-              Blog
-            </Link>
-          </li>
-          <li className="my-4">
-            <Link to={"/home5"} href="#">
-              Contact
             </Link>
           </li>
         </ul>
       </nav>
-      <button onClick={changeSidebar}>Click me</button>
+      <button onClick={() => changeSidebar()}>Click me</button>
     </div>
   );
 };

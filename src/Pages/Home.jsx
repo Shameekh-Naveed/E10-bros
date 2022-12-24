@@ -2,6 +2,7 @@ import React from "react";
 import { MenuCard } from "../Components/MenuCard";
 import { Newsletter } from "../Components/Newsletter";
 
+
 export const Home = () => {
   return (
     <div className="main w-screen p-2 ml-12">

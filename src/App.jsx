@@ -8,7 +8,6 @@ import { Profile } from "./Pages/Profile";
 import { Home } from "./Pages/Home";
 import  Menu  from "./Pages/Menu";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import autoAnimate from "@formkit/auto-animate";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 // import Root from "./routes/root";
 
@@ -23,7 +22,7 @@ const App = () => {
   // }, [parentRef]);
 
   return (
-    <div ref={parent} className="m-0 p-0 flex flex-row">
+    <div className="m-0 p-0 flex flex-row" ref={parent}>
       <Sidebar />
 
       <Routes>
@@ -39,6 +38,7 @@ const App = () => {
         {/* <Route path="*" element={<NoMatch />} /> */}
         {/* </Route> */}
       </Routes>
+      <CartComponent />
     </div>
   );
 };
