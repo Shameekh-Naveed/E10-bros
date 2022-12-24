@@ -1,5 +1,6 @@
 import React from "react";
 import { MenuCard } from "../Components/MenuCard";
+import { Newsletter } from "../Components/Newsletter";
 
 export const Home = () => {
   return (
@@ -41,8 +42,9 @@ export const Home = () => {
         <MenuCard/>
         </div>
       </div>
-      <div className="section"></div>
-      <div id="newsletter"></div>
+      <div id="newsletter">
+        <Newsletter/>
+      </div>
     </div>
   );
 };

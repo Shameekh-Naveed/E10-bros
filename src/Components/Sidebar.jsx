@@ -39,13 +39,13 @@ export const Sidebar = () => {
       <nav>
         <ul>
           <li className="my-4">
-            <Link to={"/home"} href="#">
+            <Link to={"/"} href="#">
               Home
             </Link>
           </li>
           <li className="my-4">
-            <Link to={"/home2"} href="#">
-              About
+            <Link to={"/menu"} href="#">
+              Menu
             </Link>
           </li>
           <li className="my-4">
@@ -54,8 +54,8 @@ export const Sidebar = () => {
             </Link>
           </li>
           <li className="my-4">
-            <Link to={"/home3"} href="#">
-              Portfolio
+            <Link to={"/profile"} href="#">
+              Profile
             </Link>
           </li>
           <li className="my-4">

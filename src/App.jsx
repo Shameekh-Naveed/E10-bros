@@ -6,6 +6,7 @@ import LoginSignup from "./Components/LoginSignup";
 import { Checkout } from "./Pages/Checkout";
 import { Profile } from "./Pages/Profile";
 import { Home } from "./Pages/Home";
+import  Menu  from "./Pages/Menu";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import autoAnimate from "@formkit/auto-animate";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
@@ -28,7 +29,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route index element={<Home />} /> */}
-        <Route path="/home2" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/menu" element={<Menu />} />
+  
 
         {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
